@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The Vikas Salon &amp; Academy — Butwal | Hair • Makeup • Nails • Lashes</title>
+<meta name="description" content="The Vikas Salon & Academy, Butwal – Kalikanagar. Hair, makeup, nails & lashes, plus professional beauty classes. Book your appointment on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#0d0c0a; --coal:#161310; --panel:#1d1915;
+  --cream:#f6f1e7; --paper:#fbf8f1;
+  --gold:#c6a15b; --gold-d:#a9853e;
+  --ink:#211d17; --mut:#6f695d; --line:#e7dfd0;
+  --serif:'Playfair Display',Georgia,serif; --sans:'DM Sans',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.55;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.wrap{width:min(1180px,92%);margin:0 auto}
+.eyebrow{letter-spacing:.32em;font-size:.68rem;font-weight:700;text-transform:uppercase}
+h1,h2{font-family:var(--serif);font-weight:600;line-height:1.08}
+.btn{display:inline-block;padding:.85rem 1.7rem;font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--gold);transition:.25s;cursor:pointer;text-align:center}
+.btn-gold{background:var(--gold);color:#141109}
+.btn-gold:hover{background:var(--gold-d);border-color:var(--gold-d)}
+.btn-line{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-line:hover{border-color:var(--gold);color:var(--gold)}
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:60;background:rgba(13,12,10,.96);border-bottom:1px solid rgba(198,161,91,.25)}
+.hbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.8rem 0}
+.logo{color:#fff;line-height:1}
+.logo .l1{font-family:var(--serif);font-size:1.45rem;letter-spacing:.14em}
+.logo .l2{display:block;font-size:.56rem;letter-spacing:.5em;color:var(--gold);margin-top:.28rem;font-family:var(--sans);font-weight:700}
+nav.main{display:flex;gap:2rem}
+nav.main a{color:#e9e2d4;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;padding:.3rem 0}
+nav.main a:hover{color:var(--gold)}
+.hbook{padding:.62rem 1.25rem}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:.4rem}
+.burger span{display:block;width:26px;height:2px;background:#fff;margin:6px 0}
+/* hero */
+.hero{background:var(--black);color:#fff;padding:8.2rem 0 4.6rem;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.4rem);margin:1.1rem 0 1rem}
+.hero h1 em{color:var(--gold);font-style:italic}
+.hero p{color:#cfc8ba;max-width:30rem;font-size:1.02rem}
+.hero-cta{display:flex;gap:.9rem;margin-top:1.9rem;flex-wrap:wrap}
+.hero-img{position:relative}
+.hero-img img{width:100%;height:520px;object-fit:cover;object-position:top}
+.hero-img::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(198,161,91,.5);pointer-events:none}
+/* sections */
+section{padding:4.6rem 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;margin-bottom:2.2rem}
+.sec-head h2{font-size:clamp(1.8rem,3.4vw,2.5rem)}
+.sec-head .view{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gold-d);font-weight:700;white-space:nowrap}
+.gold-rule{width:44px;height:2px;background:var(--gold);margin-top:.8rem}
+/* categories */
+.cats{background:var(--cream)}
+.cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem}
+.cat{background:#fff;padding-bottom:1.05rem;text-align:center;cursor:pointer;border:1px solid transparent;transition:.25s}
+.cat:hover{border-color:var(--gold);transform:translateY(-3px)}
+.cat img{width:100%;height:230px;object-fit:cover}
+.cat .cl{margin-top:1rem;font-size:.85rem;letter-spacing:.3em;font-weight:700}
+.cat .tick{width:26px;height:2px;background:var(--gold);margin:.5rem auto 0}
+/* experience */
+.exp-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:3rem;align-items:center}
+.exp-grid p{color:#4c463d;margin:1.1rem 0 1.6rem;max-width:28rem}
+.exp-grid img{width:100%;height:380px;object-fit:cover}
+/* work */
+.work{background:#fff}
+.gal{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
+.gal img{width:100%;height:250px;object-fit:cover}
+/* academy */
+.academy{position:relative;color:#fff;background:#000}
+.academy img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42}
+.academy .inner{position:relative;text-align:center;padding:1.4rem 0}
+.academy h2{font-size:clamp(2rem,4vw,3rem)}
+.academy p{color:#e6ddca;letter-spacing:.24em;text-transform:uppercase;font-size:.8rem;margin:.9rem 0 1.7rem}
+/* why */
+.why{background:var(--cream)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.why-card{background:#fff;padding:2rem 1.6rem;border-top:3px solid var(--gold)}
+.why-card .big{font-family:var(--serif);font-size:2rem;color:var(--gold-d)}
+.why-card h3{font-family:var(--serif);font-size:1.25rem;margin:.5rem 0 .45rem}
+.why-card p{color:var(--mut);font-size:.94rem}
+/* booking */
+.book{background:var(--black);color:#fff}
+.book-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:3.2rem}
+.book .eyebrow{color:var(--gold)}
+.book h2{font-size:clamp(2rem,4vw,3rem);margin:.8rem 0 .8rem}
+.book h2 em{color:var(--gold);font-style:italic}
+.book p{color:#cfc8ba;max-width:24rem}
+form{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+form label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:#bdb4a2;display:block;margin-bottom:.4rem}
+form input,form select{width:100%;padding:.85rem .9rem;background:var(--panel);border:1px solid #3a342a;color:#fff;font-family:var(--sans);font-size:.95rem;border-radius:2px}
+form input::placeholder{color:#7d7668}
+form .full{grid-column:1/-1}
+form select option{color:#111}
+.req{grid-column:1/-1;background:var(--gold);color:#141109;border:0;padding:1rem;font-weight:700;letter-spacing:.2em;font-size:.82rem;cursor:pointer;text-transform:uppercase}
+.req:hover{background:var(--gold-d)}
+.wa-note{grid-column:1/-1;color:#9d968a;font-size:.84rem;text-align:center}
+/* footer */
+footer{background:#090807;color:#b9b1a1;padding:3.2rem 0 2rem}
+.f-grid{display:flex;justify-content:space-between;gap:2rem;flex-wrap:wrap;align-items:flex-start}
+.f-contact{display:flex;gap:2.2rem;flex-wrap:wrap;font-size:.92rem}
+.f-contact b{color:#fff;font-weight:500}
+.f-contact a:hover{color:var(--gold)}
+.f-bottom{border-top:1px solid #26221c;margin-top:2.2rem;padding-top:1.2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.8rem;color:#7d7668}
+/* scroll cue */
+.cue{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:55;width:42px;height:42px;border-radius:50%;background:rgba(13,12,10,.82);border:1px solid rgba(198,161,91,.65);display:flex;align-items:center;justify-content:center;transition:opacity .3s}
+.cue svg{width:18px;height:18px;stroke:var(--gold);animation:bob 1.8s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+.cue.hide{opacity:0;pointer-events:none}
+/* mobile bar */
+.mbar{display:none}
+/* mobile */
+@media (max-width:900px){
+  nav.main{display:none;position:absolute;top:100%;left:0;right:0;background:var(--black);flex-direction:column;gap:0;padding:.6rem 4%}
+  nav.main.open{display:flex}
+  nav.main a{padding:.85rem 0;border-top:1px solid #2a251e}
+  .hbook{display:none}
+  .burger{display:block}
+  .hero{padding:6.4rem 0 3.4rem}
+  .hero-grid{grid-template-columns:1fr;gap:1.8rem}
+  .hero-img{order:-1}
+  .hero-img img{height:300px}
+  .hero-img::after{display:none}
+  section{padding:3.4rem 0}
+  .cat-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .cat img{height:170px}
+  .exp-grid,.book-grid{grid-template-columns:1fr;gap:1.8rem}
+  .exp-grid img{height:280px}
+  .gal{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:.5rem}
+  .gal img{flex:0 0 68%;height:230px;scroll-snap-align:start}
+  .why-grid{grid-template-columns:1fr}
+  form{grid-template-columns:1fr}
+  body{padding-bottom:64px}
+  .cue{bottom:86px}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(13,12,10,.98);border-top:1px solid rgba(198,161,91,.4);padding-bottom:env(safe-area-inset-bottom)}
+  .mbar a{flex:1;text-align:center;padding:.95rem 0;color:#f0e9da;font-size:.8rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+  .mbar a.mid{color:var(--gold)}
+  .f-grid{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hbar">
+    <a class="logo" href="#top" aria-label="The Vikas Salon and Academy — home">
+      <span class="l1">THE VIKAS</span>
+      <span class="l2">SALON &amp; ACADEMY</span>
+    </a>
+    <nav class="main" id="mainNav" aria-label="Main">
+      <a href="#top">Home</a>
+      <a href="#experience">About</a>
+      <a href="#services">Services</a>
+      <a href="#work">Our Work</a>
+      <a href="#academy">Academy</a>
+      <a href="#book">Contact</a>
+    </nav>
+    <a class="btn btn-gold hbook" href="#book">Book Appointment</a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Butwal • Hair • Makeup • Nails • Lashes</p>
+        <h1>Your Style.<br><em>Your Confidence.</em></h1>
+        <p>Hair, makeup, nails &amp; beauty services — crafted with care.</p>
+        <div class="hero-cta">
+          <a class="btn btn-gold" href="#book">Book Your Visit</a>
+          <a class="btn btn-line" href="#services">Explore Services</a>
+        </div>
+      </div>
+      <div class="hero-img"><img src="images/hero.jpg" alt="Client with long wavy highlighted hair at The Vikas Salon"></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="cats" id="services">
+    <div class="wrap">
+      <div class="cat-grid">
+        <article class="cat" data-service="Hair" tabindex="0" role="button" aria-label="Book a hair service">
+          <img src="images/hair.jpg" alt="Hair styling at The Vikas Salon">
+          <div class="cl">HAIR</div><div class="tick"></div>
+        </article>
+        <article class="cat" data-service="Makeup" tabindex="0" role="button" aria-label="Book a makeup service">
+          <img src="images/makeup.jpg" alt="Makeup application at The Vikas Salon">
+          <div class="cl">MAKEUP</div><div class="tick"></div>
+        </article>
+        <article class="cat" data-service="Nails" tabindex="0" role="button" aria-label="Book a nail service">
+          <img src="images/nails.jpg" alt="Manicured nails at The Vikas Salon">
+          <div class="cl">NAILS</div><div class="tick"></div>
+        </article>
+        <article class="cat" data-service="Lashes" tabindex="0" role="button" aria-label="Book a lash service">
+          <img src="images/lashes.jpg" alt="Eyelash extensions at The Vikas Salon">
+          <div class="cl">LASHES</div><div class="tick"></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap exp-grid">
+      <div>
+        <h2>The Vikas Experience</h2>
+        <div class="gold-rule"></div>
+        <p>At The Vikas Salon &amp; Academy, we believe beauty is personal. Our team is dedicated to providing professional, personalised beauty services that bring out the best in you — with care, creativity and attention to detail.</p>
+        <a class="btn btn-gold" href="#book">About Us</a>
+      </div>
+      <img src="images/experience.jpg" alt="Stylist styling a client's hair inside The Vikas Salon">
+    </div>
+  </section>
+
+  <!-- OUR WORK -->
+  <section class="work" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><h2>Our Work</h2><div class="gold-rule"></div></div>
+        <a class="view" href="https://www.instagram.com/the_vikas_salon/" target="_blank" rel="noopener">View all on Instagram →</a>
+      </div>
+      <div class="gal">
+        <img src="images/work1.jpg" alt="Bridal hair and makeup by The Vikas Salon">
+        <img src="images/work2.jpg" alt="Braided updo hairstyle by The Vikas Salon">
+        <img src="images/hair.jpg" alt="Long wavy hairstyle by The Vikas Salon">
+        <img src="images/nails.jpg" alt="Nail work by The Vikas Salon">
+        <img src="images/lashes.jpg" alt="Lash work by The Vikas Salon">
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY -->
+  <section class="academy" id="academy">
+    <img class="bg" src="images/academy.jpg" alt="" aria-hidden="true">
+    <div class="wrap inner">
+      <h2>Learn with The Vikas</h2>
+      <p>Hair • Makeup • Nail • Lash Classes</p>
+      <a class="btn btn-gold" href="https://wa.me/9779763677036?text=Namaste%2C%20I%20want%20to%20know%20about%20the%20classes%20at%20The%20Vikas%20Salon%20%26%20Academy%20(Hair%20%2F%20Makeup%20%2F%20Nail%20%2F%20Lash)." target="_blank" rel="noopener">Enquire About Classes</a>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="why">
+    <div class="wrap">
+      <div class="sec-head"><div><h2>Why Clients Choose The Vikas</h2><div class="gold-rule"></div></div></div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="big">6,200+</div>
+          <h3>A Following That Trusts Us</h3>
+          <p>Thousands follow our work on Instagram, where we share real client results, styles and academy moments every week.</p>
+        </div>
+        <div class="why-card">
+          <div class="big">4 in 1</div>
+          <h3>Hair, Makeup, Nails &amp; Lashes</h3>
+          <p>Every beauty service under one roof in Butwal – Kalikanagar, so your full look is done in a single visit.</p>
+        </div>
+        <div class="why-card">
+          <div class="big">Salon + Academy</div>
+          <h3>We Teach What We Do</h3>
+          <p>Our stylists also train the next generation through hands-on hair, makeup, nail and lash classes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="book" id="book">
+    <div class="wrap book-grid">
+      <div>
+        <p class="eyebrow">Book an Appointment</p>
+        <h2>Look Good.<br><em>Feel Even Better.</em></h2>
+        <p>Fill in the details and we will get back to you as soon as possible. Your request opens in WhatsApp — just press send there to confirm.</p>
+      </div>
+      <form id="bookForm">
+        <div>
+          <label for="fName">Your Name</label>
+          <input id="fName" name="name" type="text" placeholder="Your full name" required autocomplete="name">
+        </div>
+        <div>
+          <label for="fPhone">Phone Number</label>
+          <input id="fPhone" name="phone" type="tel" placeholder="98XXXXXXXX" required autocomplete="tel">
+        </div>
+        <div class="full">
+          <label for="fService">Choose a Service</label>
+          <select id="fService" name="service" required>
+            <option value="" disabled selected>Select a service</option>
+            <option>Hair</option>
+            <option>Makeup</option>
+            <option>Nails</option>
+            <option>Lashes</option>
+            <option>Hair + Makeup</option>
+            <option>Academy Classes</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div>
+          <label for="fDate">Preferred Date</label>
+          <input id="fDate" name="date" type="date" required>
+        </div>
+        <div>
+          <label for="fTime">Preferred Time</label>
+          <input id="fTime" name="time" type="time" required>
+        </div>
+        <button class="req" type="submit">Request Appointment on WhatsApp</button>
+        <p class="wa-note">No payment needed to book — pay at the salon after your service.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <a class="logo" href="#top">
+        <span class="l1">THE VIKAS</span>
+        <span class="l2">SALON &amp; ACADEMY</span>
+      </a>
+      <div class="f-contact">
+        <span>📍 <b>Butwal – Kalikanagar, Nepal</b></span>
+        <span>📞 <a href="tel:+9779763677036"><b>+977 97636 77036</b></a></span>
+        <span>📷 <a href="https://www.instagram.com/the_vikas_salon/" target="_blank" rel="noopener"><b>@the_vikas_salon</b></a></span>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 The Vikas Salon &amp; Academy</span>
+      <span>Demo website by Taigra Nexus Labs</span>
+    </div>
+  </div>
+</footer>
+
+<a class="cue" id="cue" href="#services" aria-label="Scroll down to services">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M4 9l8 8 8-8"/></svg>
+</a>
+
+<nav class="mbar" aria-label="Quick actions">
+  <a href="tel:+9779763677036">Call</a>
+  <a class="mid" href="#book">Book Now</a>
+  <a href="https://wa.me/9779763677036?text=Namaste%2C%20I%20want%20to%20book%20an%20appointment%20at%20The%20Vikas%20Salon." target="_blank" rel="noopener">WhatsApp</a>
+</nav>
+
+<script>
+(function(){
+  var burger=document.getElementById('burger'),nav=document.getElementById('mainNav');
+  burger.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    burger.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.addEventListener('click',function(e){if(e.target.tagName==='A')nav.classList.remove('open');});
+
+  var sel=document.getElementById('fService');
+  function pick(service){
+    for(var i=0;i<sel.options.length;i++){if(sel.options[i].text===service){sel.selectedIndex=i;break;}}
+    document.getElementById('book').scrollIntoView({behavior:'smooth'});
+  }
+  document.querySelectorAll('.cat').forEach(function(c){
+    c.addEventListener('click',function(){pick(c.getAttribute('data-service'));});
+    c.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(c.getAttribute('data-service'));}});
+  });
+
+  document.getElementById('bookForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('fName').value.trim(),
+        phone=document.getElementById('fPhone').value.trim(),
+        service=sel.value,
+        date=document.getElementById('fDate').value,
+        time=document.getElementById('fTime').value;
+    var msg='Namaste, I want to book an appointment at The Vikas Salon & Academy.\n'
+      +'Name: '+name+'\n'
+      +'Phone: '+phone+'\n'
+      +'Service: '+service+'\n'
+      +'Preferred date: '+date+'\n'
+      +'Preferred time: '+time;
+    window.open('https://wa.me/9779763677036?text='+encodeURIComponent(msg),'_blank');
+  });
+
+  var cue=document.getElementById('cue');
+  function onScroll(){ if(window.scrollY>window.innerHeight*0.6){cue.classList.add('hide');} else {cue.classList.remove('hide');} }
+  window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+  var d=document.getElementById('fDate');
+  var today=new Date(); var iso=today.toISOString().split('T')[0];
+  d.min=iso;
+})();
+</script>
+</body>
+</html>
